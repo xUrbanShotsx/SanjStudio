@@ -32,7 +32,6 @@ export function Nav() {
         {/* Centre: logo */}
         <a href="#" className="nav-logo" onClick={close}>
           <span className="nav-logo-main">SanjStudio</span>
-          <span className="nav-logo-sub">Wollongong, NSW</span>
         </a>
 
         {/* Right: CTA */}
