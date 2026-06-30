@@ -64,9 +64,9 @@ export default function Home() {
               },
               {
                 index: "02",
-                name: "Gallery Websites",
-                desc: "Portfolio and showcase sites built for visual impact. Photography, interiors, art, product — every image given the space and presentation it deserves.",
-                tags: ["Full-screen imagery", "Filterable galleries", "Lightbox"],
+                name: "Tradies & Builders",
+                desc: "Purpose-built sites for trades and construction. Showcase your work, generate local leads, and stand out from the directory listings.",
+                tags: ["Project galleries", "Local SEO", "Lead capture"],
               },
               {
                 index: "03",
