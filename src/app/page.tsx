@@ -1,6 +1,5 @@
 import { Nav } from "@/components/Nav";
 import { ScrollReveal } from "@/components/ScrollReveal";
-import { ContactForm } from "@/components/ContactForm";
 import { Marquee } from "@/components/Marquee";
 
 export default function Home() {
@@ -205,25 +204,21 @@ export default function Home() {
       {/* ── Contact ──────────────────────────────────────── */}
       <section className="contact-section" id="contact">
         <div className="container">
-          <div className="contact-grid">
+          <div className="contact-solo">
 
-            <div className="contact-left">
-              <h2 className="contact-heading" data-reveal>
-                Let&apos;s build<br />something<br />real.
-              </h2>
-              <p className="contact-sub" data-reveal>
-                Tell us what you need. We respond within 24 hours — no obligation, no pitch deck.
-              </p>
-              <a href="mailto:jyesanjurjo12@gmail.com" className="contact-email" data-reveal>
+            <h2 className="contact-heading" data-reveal>
+              Let&apos;s build<br />something<br />real.
+            </h2>
+            <p className="contact-sub" data-reveal>
+              Tell us what you need. We respond within 24 hours — no obligation, no pitch deck.
+            </p>
+            <div className="contact-links" data-reveal>
+              <a href="mailto:jyesanjurjo12@gmail.com" className="contact-email">
                 jyesanjurjo12@gmail.com
               </a>
-              <a href="tel:+61402803830" className="contact-email" style={{ marginTop: '12px' }} data-reveal>
+              <a href="tel:+61402803830" className="contact-email">
                 0402 803 830
               </a>
-            </div>
-
-            <div className="contact-right" data-reveal>
-              <ContactForm />
             </div>
 
           </div>

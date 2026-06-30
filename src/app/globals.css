@@ -1130,88 +1130,29 @@ a { color: inherit; text-decoration: none; }
   padding: var(--section-pad) 0;
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 120px;
-  align-items: start;
+.contact-solo {
+  max-width: 640px;
 }
 
-.contact-left {
+.contact-links {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 16px;
 }
 
 .contact-email {
   display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: rgba(255,255,255,0.4);
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255,255,255,0.45);
   text-decoration: none;
   letter-spacing: 0.3px;
   transition: color 0.3s ease;
   border-bottom: 1px solid rgba(255,255,255,0.12);
-  padding-bottom: 2px;
+  padding-bottom: 3px;
+  width: fit-content;
 }
 .contact-email:hover { color: #fff; border-bottom-color: rgba(255,255,255,0.5); }
-
-.contact-right {
-  padding-top: 8px;
-}
-
-.contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-}
-
-.form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin-bottom: 36px;
-}
-
-.form-label {
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  color: rgba(255,255,255,0.28);
-  text-transform: uppercase;
-  margin-bottom: 12px;
-}
-
-.form-input,
-.form-textarea {
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-  color: #fff;
-  font-family: inherit;
-  font-size: 0.9375rem;
-  font-weight: 300;
-  padding: 0 0 14px;
-  border-radius: 0;
-  outline: none;
-  transition: border-color 0.3s ease;
-  -webkit-appearance: none;
-  width: 100%;
-}
-.form-input::placeholder,
-.form-textarea::placeholder { color: rgba(255,255,255,0.15); }
-.form-input:focus,
-.form-textarea:focus { border-bottom-color: rgba(255,255,255,0.5); }
-.form-textarea { resize: none; }
-
-.contact-submit {
-  align-self: flex-start;
-  margin-top: 12px;
-}
-
-@media (max-width: 900px) {
-  .contact-grid { grid-template-columns: 1fr; gap: 64px; }
-}
 
 /* ─────────────────────────────────────────────────────────────
    Footer
