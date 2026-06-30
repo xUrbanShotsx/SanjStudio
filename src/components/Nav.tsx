@@ -49,8 +49,8 @@ export function Nav() {
           <span className="nav-dropdown-close-line" />
           <span className="nav-dropdown-close-line" />
         </button>
-        <a href="#services" className="nav-dropdown-link" onClick={close}>Services</a>
-        <a href="#about" className="nav-dropdown-link" onClick={close}>About</a>
+        <a href="/services" className="nav-dropdown-link" onClick={close}>Services</a>
+        <a href="/#about" className="nav-dropdown-link" onClick={close}>About</a>
       </div>
     </nav>
   );
