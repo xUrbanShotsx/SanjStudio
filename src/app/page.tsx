@@ -2,7 +2,6 @@ import { Nav } from "@/components/Nav";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { ContactForm } from "@/components/ContactForm";
 import { Marquee } from "@/components/Marquee";
-import { HeroCanvas } from "@/components/HeroCanvas";
 
 export default function Home() {
   return (
@@ -11,49 +10,31 @@ export default function Home() {
 
       {/* ── Hero ─────────────────────────────────────────── */}
       <section className="hero">
-        <HeroCanvas />
+        <video
+          className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/Herobackdrop.mp4" type="video/mp4" />
+        </video>
+        <div className="hero-video-overlay" />
         <div className="hero-inner">
           <div className="hero-text">
-            <h1 className="hero-h1 fade-up delay-1">
+            <div className="hero-context fade-up delay-1">
+              <span className="hero-context-rule" />
+              <span className="hero-context-label">Wollongong · Est. 2019 · Custom Websites</span>
+            </div>
+            <h1 className="hero-h1 fade-up delay-2">
               <span className="hero-h1-line">Websites</span>
               <span className="hero-h1-line">built</span>
               <span className="hero-h1-line">right.</span>
             </h1>
-            <p className="hero-sub fade-up delay-2">
-              Custom-built for small businesses across Wollongong
-              and the Illawarra. No templates, no shortcuts.
-            </p>
             <div className="hero-actions fade-up delay-3">
               <a href="#contact" className="btn btn-primary">Start your project</a>
-              <a href="#process" className="btn btn-outline-dark">How we work</a>
-            </div>
-          </div>
-
-          <div className="hero-visual fade-up delay-4">
-            <div className="browser-frame">
-              <div className="browser-chrome">
-                <span className="b-dot b-dot-r" /><span className="b-dot b-dot-y" /><span className="b-dot b-dot-g" />
-                <div className="browser-url" />
-              </div>
-              <div className="browser-screen">
-                <div className="mini-nav-bar">
-                  <div className="mini-logo-pill" />
-                  <div className="mini-nav-dots">
-                    <div className="mini-nav-dot" /><div className="mini-nav-dot" /><div className="mini-nav-dot" />
-                  </div>
-                </div>
-                <div className="mini-hero-band">
-                  <div className="mini-h" /><div className="mini-h2" /><div className="mini-cta-bar" />
-                </div>
-                <div className="mini-content">
-                  {[0, 1, 2].map(i => (
-                    <div key={i} className="mini-card">
-                      <div className="mini-card-h" /><div className="mini-card-t" /><div className="mini-card-t2" />
-                    </div>
-                  ))}
-                </div>
-                <div className="mini-footer" />
-              </div>
+              <a href="#services" className="hero-text-link">Explore our work ↓</a>
             </div>
           </div>
         </div>
@@ -68,35 +49,63 @@ export default function Home() {
       <Marquee />
 
       {/* ── Services ─────────────────────────────────────── */}
-      <section className="section" id="services">
+      <section className="section services-light" id="services">
         <div className="container">
-          <div className="services-label">Services</div>
-          {[
-            {
-              name: "Custom Website Design",
-              desc: "Designed ground-up for your brand. Every layout, typeface, and detail built to work — not borrowed from a template.",
-            },
-            {
-              name: "E-Commerce",
-              desc: "WooCommerce and Shopify stores engineered to convert. Fast, intuitive, built for how people actually shop.",
-            },
-            {
-              name: "Care & Maintenance",
-              desc: "We stay on after launch. Monthly care keeps your site fast, secure, and current.",
-            },
-          ].map(({ name, desc }, i) => (
-            <ScrollReveal key={name} delay={i * 60}>
-              <div className="service-row">
-                <div className="service-name">{name}</div>
-                <p className="service-desc">{desc}</p>
-              </div>
-            </ScrollReveal>
-          ))}
+          <div className="services-header">
+            <span className="services-label" style={{ marginBottom: 0 }}>Our Services</span>
+            <p className="services-intro">Three focused offerings. Each built from scratch, to spec.</p>
+          </div>
+          <div className="service-frames">
+            {[
+              {
+                index: "01",
+                name: "Informational Websites",
+                desc: "Clean, fast, purpose-built sites that tell your story and convert visitors into customers. Designed around your brand — no generic layouts, no page builders.",
+                tags: ["Brand identity", "Contact & enquiry", "SEO-ready"],
+              },
+              {
+                index: "02",
+                name: "Gallery Websites",
+                desc: "Portfolio and showcase sites built for visual impact. Photography, interiors, art, product — every image given the space and presentation it deserves.",
+                tags: ["Full-screen imagery", "Filterable galleries", "Lightbox"],
+              },
+              {
+                index: "03",
+                name: "Boutique Real Estate",
+                desc: "Custom property sites with CRM integration. Listing feeds, enquiry management, and agent profiles — built for agencies that want something beyond the template portals.",
+                tags: ["CRM integration", "Live listings", "Enquiry management"],
+              },
+            ].map(({ index, name, desc, tags }, i) => (
+              <ScrollReveal key={name} delay={i * 80}>
+                <div className="service-frame">
+                  <div className="service-frame-index">{index}</div>
+                  <div className="service-frame-body">
+                    <h3 className="service-frame-name">{name}</h3>
+                    <p className="service-frame-desc">{desc}</p>
+                    <div className="service-frame-tags">
+                      {tags.map(t => <span key={t} className="service-frame-tag">{t}</span>)}
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
       {/* ── Statement ─────────────────────────────────────── */}
       <section className="statement-section">
+        <video
+          className="statement-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          aria-hidden="true"
+        >
+          <source src="/Secondvid.mp4" type="video/mp4" />
+        </video>
+        <div className="statement-video-overlay" />
         <div className="statement-inner">
           <span className="gold-line" />
           <h2 className="statement-h2" data-reveal>
@@ -116,128 +125,107 @@ export default function Home() {
       </section>
 
       {/* ── Studio / About ───────────────────────────────── */}
-      <section className="section" id="about">
-        <div className="container">
-          <div className="studio-grid">
-            <div className="studio-left">
-              <ScrollReveal>
-                <p className="studio-location">Wollongong, NSW</p>
-                <h2 className="studio-headline" data-reveal>
-                  The Illawarra&apos;s studio for businesses that take their
-                  website seriously.
-                </h2>
-                <p className="studio-body">
-                  We&apos;ve been building custom websites from Wollongong since 2019.
-                  Not page-builders, not drag-and-drop — real code, built to perform,
-                  owned by you. Every project is handled personally. Every site is built
-                  from scratch.
-                </p>
-              </ScrollReveal>
-            </div>
-            <div className="studio-right">
-              <ScrollReveal delay={80}>
-                {[
-                  { stat: "50+",    detail: "websites launched" },
-                  { stat: "2019",   detail: "founded in Wollongong" },
-                  { stat: "2–4wk",  detail: "average from brief to live" },
-                  { stat: "100%",   detail: "custom — no templates, ever" },
-                  { stat: "Local",  detail: "same-timezone, same-city support" },
-                ].map(({ stat, detail }) => (
-                  <div key={stat} className="studio-fact">
-                    <span className="studio-fact-stat">{stat}</span>
-                    <span className="studio-fact-detail">{detail}</span>
-                  </div>
-                ))}
-              </ScrollReveal>
-            </div>
+      <section className="studio-section" id="about">
+
+        <div className="container studio-container">
+
+          {/* Meta row */}
+          <div className="studio-meta-row" data-reveal-group>
+            <span className="studio-meta-tag" data-reveal-child>Wollongong, NSW</span>
+            <div className="studio-meta-rule" data-line />
+            <span className="studio-meta-tag studio-meta-tag--dim" data-reveal-child>Est. 2019</span>
           </div>
+
+          {/* Massive headline */}
+          <h2 className="studio-editorial-h2">
+            <span className="studio-h2-line" data-reveal>The Illawarra&apos;s</span>
+            <span className="studio-h2-line studio-h2-line--push" data-reveal>studio for</span>
+            <span className="studio-h2-line studio-h2-line--serif" data-reveal>serious websites.</span>
+          </h2>
+
+          {/* Process steps */}
+          <div className="studio-steps-row" data-reveal-group>
+            {[
+              {
+                num: "01",
+                name: "Discover.",
+                desc: "Your goals, your customers, your competitors — understood before a single pixel is designed.",
+              },
+              {
+                num: "02",
+                name: "Design & Build.",
+                desc: "Every element crafted for your brand. Real code, tested on every screen size.",
+              },
+              {
+                num: "03",
+                name: "Launch.",
+                desc: "Full handover, walk-through training, and we stay available long after go-live.",
+              },
+            ].map(({ num, name, desc }) => (
+              <div key={num} className="studio-step" data-reveal-child>
+                <span className="studio-step-num">{num}</span>
+                <div className="studio-step-name">{name}</div>
+                <p className="studio-step-desc">{desc}</p>
+              </div>
+            ))}
+          </div>
+
         </div>
       </section>
 
       {/* ── Deliverables ─────────────────────────────────── */}
-      <section className="section-soft" id="deliverables">
+      <section className="deliverables-section" id="deliverables">
         <div className="container">
-          <div className="deliverables-header">
-            <span className="services-label" style={{ marginBottom: 0 }}>Every project includes</span>
+          <div className="deliverables-header-row">
+            <h2 className="deliverables-heading" data-reveal>Every project<br /><em>includes.</em></h2>
+            <p className="deliverables-sub">Eight things in every build — no add-ons, no negotiation.</p>
           </div>
-          <div className="deliverables-grid">
+          <div className="deliverables-list" data-reveal-group>
             {[
-              { name: "Custom design",       desc: "Built around your brand identity — not adapted from a theme." },
-              { name: "Hand-coded",          desc: "Real HTML, CSS and JavaScript. No Webflow, no Wix, no builders." },
-              { name: "Mobile-first",        desc: "Designed for phones first. Every layout tested on every screen size." },
-              { name: "SEO foundations",     desc: "Structured for search from day one. Fast, semantic, crawlable." },
-              { name: "Speed optimised",     desc: "Sub-2-second load targets. Performance is part of the build, not an afterthought." },
-              { name: "You own it",          desc: "Full code handover. No lock-in, no ongoing platform fees to us." },
-              { name: "Launch support",      desc: "We go live together. Walk-through, training, and a full handover session." },
-              { name: "12-month warranty",   desc: "We fix anything that breaks in the first year. No caveats." },
+              { name: "Custom design",     desc: "Built around your brand identity — not adapted from a theme." },
+              { name: "Hand-coded",        desc: "Real HTML, CSS and JavaScript. No Webflow, no Wix, no builders." },
+              { name: "Mobile-first",      desc: "Designed for phones first. Every layout tested on every screen size." },
+              { name: "SEO foundations",   desc: "Structured for search from day one. Fast, semantic, crawlable." },
+              { name: "Speed optimised",   desc: "Sub-2-second load targets. Performance is part of the build, not an afterthought." },
+              { name: "You own it",        desc: "Full code handover. No lock-in, no ongoing platform fees to us." },
+              { name: "Launch support",    desc: "We go live together. Walk-through, training, and a full handover session." },
+              { name: "12-month warranty", desc: "We fix anything that breaks in the first year. No caveats." },
             ].map(({ name, desc }, i) => (
-              <ScrollReveal key={name} delay={i * 40}>
-                <div className="deliverable-row">
-                  <div className="deliverable-name">{name}</div>
-                  <p className="deliverable-desc">{desc}</p>
-                </div>
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Process ──────────────────────────────────────── */}
-      <section className="section-dark" id="process">
-        <div className="container">
-          <div className="process-editorial" data-reveal-group>
-            {[
-              {
-                name: "Discover.",
-                desc: "We start by listening. Your customers, your goals, your competitors — understood before a single pixel is designed.",
-              },
-              {
-                name: "Design & Build.",
-                desc: "Every element crafted specifically for your brand. Real code, tested on every screen, not shipped until it's right.",
-              },
-              {
-                name: "Launch.",
-                desc: "Go-live is a handshake, not a drop-off. Full handover, training, and we stay available after delivery day.",
-              },
-            ].map(({ name, desc }) => (
-              <div key={name} className="process-editorial-row" data-reveal-child>
-                <div className="process-editorial-name">{name}</div>
-                <p className="process-editorial-desc">{desc}</p>
+              <div key={name} className="deliverable-item" data-reveal-child>
+                <span className="deliverable-index">{String(i + 1).padStart(2, "0")}</span>
+                <div className="deliverable-name">{name}</div>
+                <p className="deliverable-desc">{desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
+
 
       {/* ── Contact ──────────────────────────────────────── */}
-      <section className="section-dark" id="contact" style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+      <section className="contact-section" id="contact">
         <div className="container">
           <div className="contact-grid">
-            <ScrollReveal>
-              <h2 className="contact-heading" data-reveal>
-                Let&apos;s build<br />something real.
-              </h2>
-              <p className="contact-sub">
-                Tell us what you need. We&apos;ll respond within 24 hours —
-                no obligation, no pitch deck.
-              </p>
-              <div className="contact-details">
-                {[
-                  { label: "Email",   value: "hello@sanjstudio.com.au" },
-                  { label: "Phone",   value: "+61 4XX XXX XXX" },
-                  { label: "Studio",  value: "Wollongong, NSW" },
-                ].map(({ label, value }) => (
-                  <div key={label} className="contact-info-block">
-                    <div className="contact-info-label">{label}</div>
-                    <div className="contact-info-value">{value}</div>
-                  </div>
-                ))}
-              </div>
-            </ScrollReveal>
 
-            <ScrollReveal delay={100}>
+            <div className="contact-left">
+              <h2 className="contact-heading" data-reveal>
+                Let&apos;s build<br />something<br />real.
+              </h2>
+              <p className="contact-sub" data-reveal>
+                Tell us what you need. We respond within 24 hours — no obligation, no pitch deck.
+              </p>
+              <a href="mailto:jyesanjurjo12@gmail.com" className="contact-email" data-reveal>
+                jyesanjurjo12@gmail.com
+              </a>
+              <a href="tel:+61402803830" className="contact-email" style={{ marginTop: '12px' }} data-reveal>
+                0402 803 830
+              </a>
+            </div>
+
+            <div className="contact-right" data-reveal>
               <ContactForm />
-            </ScrollReveal>
+            </div>
+
           </div>
         </div>
       </section>
@@ -259,15 +247,14 @@ export default function Home() {
               <ul className="footer-links">
                 <li><a href="#services">Services</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#process">Process</a></li>
                 <li><a href="#contact">Contact</a></li>
               </ul>
             </div>
             <div>
               <div className="footer-col-title">Contact</div>
               <ul className="footer-links">
-                <li><a href="mailto:hello@sanjstudio.com.au">hello@sanjstudio.com.au</a></li>
-                <li><a href="tel:+61400000000">+61 4XX XXX XXX</a></li>
+                <li><a href="mailto:jyesanjurjo12@gmail.com">jyesanjurjo12@gmail.com</a></li>
+                <li><a href="tel:+61402803830">0402 803 830</a></li>
                 <li>Wollongong, NSW</li>
               </ul>
             </div>

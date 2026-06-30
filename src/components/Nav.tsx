@@ -13,19 +13,24 @@ export function Nav() {
   return (
     <nav className={`nav ${scrolled ? "scrolled" : ""}`}>
       <div className="nav-inner">
+        {/* Left: links */}
+        <ul className="nav-links">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+
+        {/* Centre: logo */}
         <a href="#" className="nav-logo">
           <span className="nav-logo-main">SanjStudio</span>
           <span className="nav-logo-sub">Wollongong, NSW</span>
         </a>
-        <ul className="nav-links">
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <a href="#contact" className="nav-cta">
-          Start a project
-        </a>
+
+        {/* Right: CTA */}
+        <div className="nav-right">
+          <a href="#contact" className="nav-cta">
+            Start a project
+          </a>
+        </div>
       </div>
     </nav>
   );
