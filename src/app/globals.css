@@ -293,6 +293,35 @@ a { color: inherit; text-decoration: none; }
   pointer-events: auto;
 }
 
+.nav-dropdown-close {
+  position: absolute;
+  top: 28px;
+  right: var(--container-px);
+  background: none;
+  border: none;
+  cursor: none;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  opacity: 0.45;
+  transition: opacity 0.2s ease;
+}
+.nav-dropdown-close:hover { opacity: 1; }
+.nav-dropdown-close-line {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: #fff;
+  transform-origin: center;
+}
+.nav-dropdown-close-line:nth-child(1) { transform: translateY(0.5px) rotate(45deg); }
+.nav-dropdown-close-line:nth-child(2) { transform: translateY(-0.5px) rotate(-45deg); }
+
 .nav-dropdown-link {
   font-size: clamp(2.5rem, 7vw, 5.5rem);
   font-weight: 800;

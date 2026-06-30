@@ -43,8 +43,12 @@ export function Nav() {
 
       </div>
 
-      {/* Dropdown menu */}
+      {/* Full-screen overlay menu */}
       <div className={`nav-dropdown ${open ? "nav-dropdown--open" : ""}`}>
+        <button className="nav-dropdown-close" onClick={close} aria-label="Close menu">
+          <span className="nav-dropdown-close-line" />
+          <span className="nav-dropdown-close-line" />
+        </button>
         <a href="#services" className="nav-dropdown-link" onClick={close}>Services</a>
         <a href="#about" className="nav-dropdown-link" onClick={close}>About</a>
       </div>
