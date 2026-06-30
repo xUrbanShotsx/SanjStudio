@@ -192,6 +192,9 @@ a { color: inherit; text-decoration: none; }
   padding: 0 var(--container-px);
   height: 72px;
 }
+.nav:not(.scrolled) {
+  border-bottom-color: transparent !important;
+}
 .nav.scrolled {
   background: rgba(255,255,255,0.97);
   border-color: #e0e0e0;
