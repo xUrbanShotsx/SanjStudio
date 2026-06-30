@@ -1,23 +1,12 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const [hidden, setHidden] = useState(false);
   const [open, setOpen] = useState(false);
-  const lastY = useRef(0);
 
   useEffect(() => {
-    const onScroll = () => {
-      const y = window.scrollY;
-      setScrolled(y > 20);
-      if (y > 120) {
-        setHidden(y > lastY.current);
-      } else {
-        setHidden(false);
-      }
-      lastY.current = y;
-    };
+    const onScroll = () => setScrolled(window.scrollY > 20);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -25,7 +14,7 @@ export function Nav() {
   const close = () => setOpen(false);
 
   return (
-    <nav className={`nav ${scrolled ? "scrolled" : ""} ${open ? "nav-open" : ""} ${hidden && !open ? "nav-hidden" : ""}`}>
+    <nav className={`nav ${scrolled ? "scrolled" : ""} ${open ? "nav-open" : ""}`}>
       <div className="nav-inner">
 
         {/* Left: hamburger */}
