@@ -48,46 +48,54 @@ export default function Home() {
       <Marquee />
 
       {/* ── Services ─────────────────────────────────────── */}
-      <section className="section services-light" id="services">
+      <section className="svc-section" id="services">
         <div className="container">
-          <div className="services-header">
-            <span className="services-label" style={{ marginBottom: 0 }}>Our Services</span>
-            <p className="services-intro">Three focused offerings. Each built from scratch, to spec.</p>
+          <div className="svc-header">
+            <h2 className="svc-heading">What we build</h2>
+            <p className="svc-heading-sub">Every site is scoped, designed and coded for one business. Yours.</p>
           </div>
-          <div className="service-frames">
-            {[
-              {
-                index: "01",
-                name: "Informational Websites",
-                desc: "Clean, fast, purpose-built sites that tell your story and convert visitors into customers. Designed around your brand — no generic layouts, no page builders.",
-                tags: ["Brand identity", "Contact & enquiry", "SEO-ready"],
-              },
-              {
-                index: "02",
-                name: "Tradies & Builders",
-                desc: "Purpose-built sites for trades and construction. Showcase your work, generate local leads, and stand out from the directory listings.",
-                tags: ["Project galleries", "Local SEO", "Lead capture"],
-              },
-              {
-                index: "03",
-                name: "Boutique Real Estate",
-                desc: "Custom property sites with CRM integration. Listing feeds, enquiry management, and agent profiles — built for agencies that want something beyond the template portals.",
-                tags: ["CRM integration", "Live listings", "Enquiry management"],
-              },
-            ].map(({ index, name, desc, tags }, i) => (
-              <ScrollReveal key={name} delay={i * 80}>
-                <div className="service-frame">
-                  <div className="service-frame-index">{index}</div>
-                  <div className="service-frame-body">
-                    <h3 className="service-frame-name">{name}</h3>
-                    <p className="service-frame-desc">{desc}</p>
-                    <div className="service-frame-tags">
-                      {tags.map(t => <span key={t} className="service-frame-tag">{t}</span>)}
-                    </div>
-                  </div>
+
+          {[
+            {
+              index: "01",
+              name: "Informational Websites",
+              who: "Local businesses, service providers, startups",
+              desc: "Clean, fast, purpose-built sites that tell your story and convert visitors into customers. Designed around your brand — no generic layouts, no page builders.",
+              tags: ["Brand identity", "Contact & enquiry", "SEO foundations"],
+            },
+            {
+              index: "02",
+              name: "Tradies & Builders",
+              who: "Plumbers, electricians, builders, landscapers",
+              desc: "Purpose-built sites for trades and construction. Showcase your work, generate local leads, and stand out from the directory listings.",
+              tags: ["Project galleries", "Local SEO", "Lead capture"],
+            },
+            {
+              index: "03",
+              name: "Boutique Real Estate",
+              who: "Boutique agencies, buyer's agents, developers",
+              desc: "Custom property sites with CRM integration. Listing feeds, enquiry management, and agent profiles — built for agencies that want something beyond the template portals.",
+              tags: ["CRM integration", "Live listings", "Enquiry management"],
+            },
+          ].map(({ index, name, who, desc, tags }) => (
+            <div key={name} className="svc-row">
+              <div className="svc-row-counter">{index}</div>
+              <div className="svc-row-main">
+                <div className="svc-row-top">
+                  <h3 className="svc-row-name">{name}</h3>
+                  <span className="svc-row-who">{who}</span>
                 </div>
-              </ScrollReveal>
-            ))}
+                <p className="svc-row-desc">{desc}</p>
+              </div>
+              <ul className="svc-row-tags">
+                {tags.map(t => <li key={t}>{t}</li>)}
+              </ul>
+              <span className="svc-row-arrow">→</span>
+            </div>
+          ))}
+
+          <div className="svc-footer">
+            <a href="/services" className="svc-all-link">View all service packs →</a>
           </div>
         </div>
       </section>
