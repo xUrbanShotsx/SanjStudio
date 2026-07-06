@@ -4,25 +4,27 @@ const services = [
   {
     num: "01",
     name: "Design",
-    initial: "D",
+    theme: "light",
     desc: "We conceive the visual direction — layout, hierarchy, colour, and experience. Everything about how your site should look and feel, mapped out before a line of code is written. No guesswork, no revisions after the fact.",
     tags: ["Visual direction", "Layout", "UX & flow", "Wireframes"],
   },
   {
     num: "02",
     name: "Brand",
-    initial: "B",
+    theme: "orange",
     desc: "Your identity before the website. We create the colour palette, typography system, logo, and overall feel that makes your business recognisable and memorable — built to work across every surface, physical and digital.",
     tags: ["Logo design", "Colour palette", "Typography", "Brand guidelines"],
   },
   {
     num: "03",
     name: "Create",
-    initial: "C",
+    theme: "dark",
     desc: "We build everything we design. Custom-coded websites, logos, and brand assets — deployed to Vercel, tested on every screen, ready to launch. No templates, no builders. Every project complete in two weeks.",
     tags: ["Custom code", "Vercel deploy", "2-week delivery", "Full handover"],
   },
 ];
+
+const marqueeUnit = "Design — Brand — Create — Wollongong — Est. 2019 — ";
 
 export default function Home() {
   return (
@@ -35,7 +37,7 @@ export default function Home() {
           <span className="home-hero-label">Wollongong · Est. 2019</span>
           <h1 className="home-hero-h1">
             <span>Design,</span>
-            <span>brand,</span>
+            <em className="hero-h1-accent">brand,</em>
             <span>and create.</span>
           </h1>
           <div className="home-hero-footer">
@@ -47,52 +49,51 @@ export default function Home() {
           </div>
         </div>
 
-        {/* Abstract art frame */}
+        {/* Abstract art frame — vivid orange */}
         <div className="home-hero-frame" aria-hidden="true">
           <span className="hero-frame-glyph">S</span>
           <div className="hero-frame-hline hero-frame-hline--top" />
           <div className="hero-frame-hline hero-frame-hline--mid" />
+          <div className="hero-frame-hline hero-frame-hline--low" />
           <div className="hero-frame-vline" />
           <div className="hero-frame-ring hero-frame-ring--lg" />
           <div className="hero-frame-ring hero-frame-ring--sm" />
           <div className="hero-frame-dot" />
-          <span className="hero-frame-caption">SanjStudio — 2019</span>
+          <span className="hero-frame-caption">SanjStudio — Est. 2019</span>
         </div>
       </section>
 
-      {/* ── Services ─────────────────────────────────────────── */}
-      <section className="home-services" id="services">
-        <div className="container">
-          <div className="home-services-header">
-            <span className="section-label">What we do</span>
-          </div>
-          {services.map(({ num, name, initial, desc, tags }) => (
-            <div key={num} className="home-service-row">
-              <div className="home-service-left">
-                <span className="home-service-num">{num}</span>
-                <h2 className="home-service-name">{name}</h2>
+      {/* ── Marquee strip ────────────────────────────────────── */}
+      <div className="home-marquee" aria-hidden="true">
+        <div className="marquee-track">
+          <span>{marqueeUnit.repeat(8)}</span>
+          <span aria-hidden="true">{marqueeUnit.repeat(8)}</span>
+        </div>
+      </div>
+
+      {/* ── Services — 3 colour panels ───────────────────────── */}
+      <div className="home-panels" id="services">
+        {services.map(({ num, name, theme, desc, tags }, i) => (
+          <div key={num} className={`svc-panel svc-panel--${theme}`}>
+            <div className="svc-panel-inner">
+              <div className="svc-panel-header">
+                <span className="svc-panel-num">{num}</span>
+                <h2 className="svc-panel-name">{name}</h2>
               </div>
-              <div className="home-service-right">
-                <p className="home-service-desc">{desc}</p>
-                <ul className="home-service-tags">
+              <div className="svc-panel-body">
+                <p className="svc-panel-desc">{desc}</p>
+                <ul className="svc-panel-tags">
                   {tags.map(t => <li key={t}>{t}</li>)}
                 </ul>
               </div>
-              <div className="home-service-frame" aria-hidden="true">
-                <span className="service-frame-glyph">{initial}</span>
-                <div className="service-frame-line" />
-              </div>
+              {i === services.length - 1 && (
+                <div className="svc-panel-footer">
+                  <a href="/services" className="svc-panel-link">Full service breakdown →</a>
+                </div>
+              )}
             </div>
-          ))}
-          <div className="home-services-footer">
-            <a href="/services" className="home-services-link">Full service breakdown →</a>
           </div>
-        </div>
-      </section>
-
-      {/* ── Interlude band ───────────────────────────────────── */}
-      <div className="home-interlude" aria-hidden="true">
-        <span className="home-interlude-text">Wollongong</span>
+        ))}
       </div>
 
       {/* ── About ────────────────────────────────────────────── */}
@@ -100,7 +101,6 @@ export default function Home() {
         <div className="container">
           <div className="home-about-grid">
             <div className="home-about-left">
-              {/* Abstract portrait frame */}
               <div className="home-about-frame" aria-hidden="true">
                 <span className="about-frame-glyph">J</span>
                 <div className="about-frame-hline" />
@@ -150,7 +150,7 @@ export default function Home() {
       <section className="home-contact" id="contact">
         <div className="container">
           <div className="home-contact-inner">
-            <span className="section-label">Get in touch</span>
+            <span className="home-contact-label">Get in touch</span>
             <h2 className="home-contact-h2">Let&apos;s work<br />together.</h2>
             <p className="home-contact-sub">
               Tell me about your project. I respond within 24 hours — no obligation.
