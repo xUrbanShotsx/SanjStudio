@@ -4,18 +4,21 @@ const services = [
   {
     num: "01",
     name: "Design",
+    initial: "D",
     desc: "We conceive the visual direction — layout, hierarchy, colour, and experience. Everything about how your site should look and feel, mapped out before a line of code is written. No guesswork, no revisions after the fact.",
     tags: ["Visual direction", "Layout", "UX & flow", "Wireframes"],
   },
   {
     num: "02",
     name: "Brand",
+    initial: "B",
     desc: "Your identity before the website. We create the colour palette, typography system, logo, and overall feel that makes your business recognisable and memorable — built to work across every surface, physical and digital.",
     tags: ["Logo design", "Colour palette", "Typography", "Brand guidelines"],
   },
   {
     num: "03",
     name: "Create",
+    initial: "C",
     desc: "We build everything we design. Custom-coded websites, logos, and brand assets — deployed to Vercel, tested on every screen, ready to launch. No templates, no builders. Every project complete in two weeks.",
     tags: ["Custom code", "Vercel deploy", "2-week delivery", "Full handover"],
   },
@@ -28,7 +31,7 @@ export default function Home() {
 
       {/* ── Hero ─────────────────────────────────────────────── */}
       <section className="home-hero">
-        <div className="home-hero-inner">
+        <div className="home-hero-text">
           <span className="home-hero-label">Wollongong · Est. 2019</span>
           <h1 className="home-hero-h1">
             <span>Design,</span>
@@ -43,6 +46,18 @@ export default function Home() {
             <a href="#contact" className="home-hero-cta">Start a project ↗</a>
           </div>
         </div>
+
+        {/* Abstract art frame */}
+        <div className="home-hero-frame" aria-hidden="true">
+          <span className="hero-frame-glyph">S</span>
+          <div className="hero-frame-hline hero-frame-hline--top" />
+          <div className="hero-frame-hline hero-frame-hline--mid" />
+          <div className="hero-frame-vline" />
+          <div className="hero-frame-ring hero-frame-ring--lg" />
+          <div className="hero-frame-ring hero-frame-ring--sm" />
+          <div className="hero-frame-dot" />
+          <span className="hero-frame-caption">SanjStudio — 2019</span>
+        </div>
       </section>
 
       {/* ── Services ─────────────────────────────────────────── */}
@@ -51,7 +66,7 @@ export default function Home() {
           <div className="home-services-header">
             <span className="section-label">What we do</span>
           </div>
-          {services.map(({ num, name, desc, tags }) => (
+          {services.map(({ num, name, initial, desc, tags }) => (
             <div key={num} className="home-service-row">
               <div className="home-service-left">
                 <span className="home-service-num">{num}</span>
@@ -63,6 +78,10 @@ export default function Home() {
                   {tags.map(t => <li key={t}>{t}</li>)}
                 </ul>
               </div>
+              <div className="home-service-frame" aria-hidden="true">
+                <span className="service-frame-glyph">{initial}</span>
+                <div className="service-frame-line" />
+              </div>
             </div>
           ))}
           <div className="home-services-footer">
@@ -71,11 +90,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── Interlude band ───────────────────────────────────── */}
+      <div className="home-interlude" aria-hidden="true">
+        <span className="home-interlude-text">Wollongong</span>
+      </div>
+
       {/* ── About ────────────────────────────────────────────── */}
       <section className="home-about" id="about">
         <div className="container">
           <div className="home-about-grid">
             <div className="home-about-left">
+              {/* Abstract portrait frame */}
+              <div className="home-about-frame" aria-hidden="true">
+                <span className="about-frame-glyph">J</span>
+                <div className="about-frame-hline" />
+                <div className="about-frame-dot" />
+                <span className="about-frame-label">Jye Sanjurjo / 22</span>
+              </div>
               <h2 className="home-about-h2">
                 One person.<br />All the work.
               </h2>
