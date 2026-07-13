@@ -248,6 +248,40 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ─────────────────────────────────────────────────────────────
+   Single contact page
+───────────────────────────────────────────────────────────── */
+.contact-page {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding: 24px;
+}
+.contact-heading {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.contact-detail {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.contact-detail:hover { color: var(--ink); }
+
+/* ─────────────────────────────────────────────────────────────
    Shared — section label
 ───────────────────────────────────────────────────────────── */
 .section-label {
