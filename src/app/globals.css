@@ -320,8 +320,8 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   aspect-ratio: 4 / 3;
   border: 1px solid var(--rule);
   display: flex;
-  align-items: flex-end;
-  padding: 14px;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   transition: border-color 0.2s ease, background 0.2s ease;
   position: relative;
@@ -332,10 +332,20 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   background: #fafafa;
 }
 .work-item-num {
+  position: absolute;
+  bottom: 12px;
+  left: 14px;
   font-size: 0.6875rem;
   font-weight: 400;
   color: var(--ink-3);
   font-variant-numeric: tabular-nums;
+}
+.work-item-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-align: center;
+  padding: 0 16px;
 }
 
 @media (max-width: 640px) {
