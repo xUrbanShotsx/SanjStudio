@@ -280,6 +280,67 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   transition: color 0.2s ease;
 }
 .contact-detail:hover { color: var(--ink); }
+.contact-work {
+  margin-top: 20px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--ink-3);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.contact-work:hover { color: var(--ink); border-color: rgba(10,10,10,0.3); }
+
+/* ─────────────────────────────────────────────────────────────
+   Work page
+───────────────────────────────────────────────────────────── */
+.work-page {
+  min-height: 100vh;
+  background: #fff;
+  padding: 48px var(--px);
+}
+.work-back {
+  display: inline-block;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--ink-3);
+  text-decoration: none;
+  margin-bottom: 40px;
+  transition: color 0.2s ease;
+}
+.work-back:hover { color: var(--ink); }
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.work-item {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--rule);
+  display: flex;
+  align-items: flex-end;
+  padding: 14px;
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+.work-item:hover {
+  border-color: rgba(10,10,10,0.25);
+  background: #fafafa;
+}
+.work-item-num {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  color: var(--ink-3);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 640px) {
+  .work-grid { grid-template-columns: repeat(2, 1fr); }
+}
 
 /* ─────────────────────────────────────────────────────────────
    Shared — section label

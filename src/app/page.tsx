@@ -9,6 +9,7 @@ export default function Home() {
         <a href="tel:+61402803830" className="contact-detail">
           0402 803 830
         </a>
+        <a href="/work" className="contact-work">View my work</a>
       </div>
     </div>
   );
