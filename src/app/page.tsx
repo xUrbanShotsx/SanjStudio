@@ -1,6 +1,18 @@
 export default function Home() {
   return (
     <div className="landing-page">
+      {/* Video background */}
+      <video
+        className="landing-video"
+        src="/3 Myee St - Drone.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+        aria-hidden="true"
+      />
+      <div className="landing-overlay" aria-hidden="true" />
+
       {/* Nav */}
       <header className="landing-nav">
         <span className="landing-logo">SANJ STUDIO</span>
