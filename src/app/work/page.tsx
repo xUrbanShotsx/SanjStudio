@@ -1,7 +1,7 @@
 const projects = [
   { num: "01", href: "https://www.healthyearth.com.au/", label: "HEALTHYEARTH BIO CARE", bg: "#2D5A27", color: "rgba(255,255,255,0.9)" },
   { num: "02", href: "https://www.spinellirealestate.com.au/", label: "SPINELLI REAL ESTATE", bg: "#5bc2e7", color: "rgba(255,255,255,0.9)" },
-  { num: "03", href: "#", label: null, bg: null, color: null },
+  { num: "03", href: "https://innovate-property.vercel.app", label: "INNOVATE PROPERTY GROUP", bg: "#0a0a0a", color: "rgba(255,255,255,0.9)" },
   { num: "04", href: "#", label: null, bg: null, color: null },
   { num: "05", href: "#", label: null, bg: null, color: null },
   { num: "06", href: "#", label: null, bg: null, color: null },
