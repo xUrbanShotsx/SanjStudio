@@ -3,7 +3,6 @@ import { Inter, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { Animations } from "@/components/Animations";
-import { Cursor } from "@/components/Cursor";
 
 const inter = Inter({
   weight: ["300", "400", "500", "700"],
@@ -32,8 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${serif.variable}`}>
       <body>
-        <Cursor />
-        <SmoothScroll />
+<SmoothScroll />
         <Animations />
         {children}
       </body>
