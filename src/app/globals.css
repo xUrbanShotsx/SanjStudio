@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Agrandir Wide';
+  src: url('/fonts/Agrandir-WideLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme inline {
   --font-sans: var(--font-inter);
 }
@@ -309,10 +317,11 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   justify-content: center;
 }
 .landing-h1 {
+  font-family: 'Agrandir Wide', sans-serif;
   font-size: clamp(3.5rem, 10vw, 8rem);
-  font-weight: 700;
+  font-weight: 300;
   line-height: 0.95;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   color: #fff;
   text-align: center;
   text-wrap: balance;
