@@ -25,7 +25,7 @@ export default function Home() {
         <div className="landing-headline">
           <h1 className="landing-h1">
             <span className="landing-h1-word">Design.</span><br />
-            <span className="landing-h1-word">Brand.</span><br />
+            <span className="landing-h1-word">Scale.</span><br />
             <span className="landing-h1-word">Create.</span>
           </h1>
         </div>
