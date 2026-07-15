@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+
+const EASE: [number, number, number, number] = EASE;
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
@@ -43,7 +45,7 @@ export default function Nav() {
         className="fixed top-0 left-0 right-0 z-50 px-6 md:px-10"
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, ease: EASE }}
       >
         <nav
           className="mx-auto max-w-7xl flex items-center justify-between py-5 transition-all duration-300"
@@ -126,7 +128,7 @@ export default function Nav() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.3, ease: EASE }}
           >
             <nav className="flex flex-col gap-8 mt-16">
               {links.map(({ label, href }, i) =>

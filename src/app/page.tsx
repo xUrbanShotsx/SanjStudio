@@ -9,6 +9,8 @@ import {
   useSpring,
   AnimatePresence,
 } from "framer-motion";
+
+const EASE: [number, number, number, number] = EASE;
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
@@ -129,7 +131,7 @@ function StatCard({ value, suffix, label, index }: { value: number; suffix: stri
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: EASE }}
     >
       <p
         className="text-5xl font-semibold text-[#C5FF2B] tabular-nums leading-none"
@@ -155,7 +157,7 @@ function ServiceRow({ num, title, desc, tags, index }: (typeof SERVICES)[0] & { 
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: EASE }}
     >
       {/* Accent line */}
       <motion.div
@@ -217,7 +219,7 @@ function WorkCard({
       initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-40px" }}
-      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, delay: index * 0.1, ease: EASE }}
     >
       {/* Hover overlay */}
       <motion.div
@@ -253,7 +255,7 @@ export default function Home() {
   const fadeUp = (delay = 0) => ({
     initial: { opacity: 0, y: 32 },
     animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] as number[] },
+    transition: { duration: 0.65, delay, ease: EASE },
   });
 
   return (
@@ -359,7 +361,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: EASE }}
           >
             <h2
               id="services-heading"
@@ -404,7 +406,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: EASE }}
           >
             <h2
               id="about-heading"
@@ -438,7 +440,7 @@ export default function Home() {
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-60px" }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: EASE }}
           >
             {/* Abstract composition */}
             <div
@@ -478,7 +480,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-40px" }}
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.5, ease: EASE }}
           >
             <h2
               id="work-heading"
@@ -525,7 +527,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, ease: EASE }}
           >
             <h2
               id="cta-heading"
@@ -544,7 +546,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.55, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.55, delay: 0.1, ease: EASE }}
           >
             <a
               href="mailto:jyesanjurjo12@gmail.com"
