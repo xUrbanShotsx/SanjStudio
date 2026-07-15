@@ -1,6 +1,9 @@
 export default function Home() {
   return (
     <div className="contact-page">
+      <header className="home-nav">
+        <span className="home-nav-logo">SANJ STUDIO</span>
+      </header>
       <div className="contact-content">
         <p className="contact-heading">Contact Me For a Website</p>
         <a href="mailto:jyesanjurjo12@gmail.com" className="contact-detail">
