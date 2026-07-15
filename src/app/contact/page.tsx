@@ -14,11 +14,12 @@ export default function ContactPage() {
     e.preventDefault();
     setStatus("sending");
     try {
-      await fetch("https://formspree.io/f/xpwzgvkb", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
+      if (!res.ok) throw new Error("send failed");
       setStatus("sent");
     } catch {
       setStatus("error");
