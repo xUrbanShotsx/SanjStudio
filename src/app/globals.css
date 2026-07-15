@@ -248,9 +248,9 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Home navbar
+   Shared nav (landing + contact)
 ───────────────────────────────────────────────────────────── */
-.home-nav {
+.landing-nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   height: 72px;
@@ -262,13 +262,14 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   z-index: 100;
   padding: 0 var(--px);
 }
-.home-nav-logo {
+.landing-logo {
   font-size: 1.125rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   color: var(--ink);
+  text-decoration: none;
 }
-.home-nav-quote {
+.landing-quote {
   position: absolute;
   right: var(--px);
   font-size: 0.75rem;
@@ -277,60 +278,175 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   color: #fff;
   background: var(--ink);
   text-decoration: none;
-  padding: 10px 20px;
-  transition: background 0.2s ease, color 0.2s ease;
+  padding: 10px 22px;
+  transition: background 0.2s ease;
 }
-.home-nav-quote:hover {
-  background: var(--orange);
+.landing-quote:hover,
+.landing-quote--active { background: var(--orange); }
+
+/* ─────────────────────────────────────────────────────────────
+   Landing page
+───────────────────────────────────────────────────────────── */
+.landing-page {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
 }
-@media (max-width: 480px) {
-  .home-nav-quote { font-size: 0.6875rem; padding: 8px 14px; }
+.landing-main {
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: calc(72px + 40px) var(--px) 40px;
+  gap: 0;
+}
+.landing-label {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  align-self: start;
+}
+.landing-headline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing-h1 {
+  font-size: clamp(3.5rem, 10vw, 8rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  color: var(--ink);
+  text-align: center;
+  text-wrap: balance;
+}
+.landing-bottom {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 32px;
+  border-top: 1px solid var(--rule);
+}
+.landing-desc {
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--ink-2);
+  line-height: 1.7;
+}
+.landing-work-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: gap 0.25s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+.landing-work-link:hover { gap: 14px; color: var(--orange); }
+
+@media (max-width: 540px) {
+  .landing-bottom { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .landing-h1 { text-align: left; }
 }
 
 /* ─────────────────────────────────────────────────────────────
-   Single contact page
+   Contact page
 ───────────────────────────────────────────────────────────── */
 .contact-page {
   position: fixed;
   inset: 0;
   background: #fff;
   display: flex;
+  flex-direction: column;
+}
+.contact-main {
+  flex: 1;
+  display: flex;
   align-items: center;
   justify-content: center;
+  padding: 72px var(--px) 40px;
 }
-.contact-content {
+.contact-inner {
+  width: 100%;
+  max-width: 520px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  text-align: center;
-  padding: 24px;
+  gap: 0;
 }
-.contact-heading {
-  font-size: 1.125rem;
-  font-weight: 500;
+.contact-kicker {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 16px;
+  display: block;
+}
+.contact-h1 {
+  font-size: clamp(2.25rem, 6vw, 3.5rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1;
   color: var(--ink);
-  margin: 0 0 8px;
+  margin-bottom: 16px;
 }
-.contact-detail {
-  font-size: 1rem;
+.contact-sub {
+  font-size: 0.9375rem;
   font-weight: 400;
   color: var(--ink-2);
+  line-height: 1.65;
+  margin-bottom: 48px;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--rule);
+  margin-bottom: 36px;
+}
+.contact-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 0;
+  border-bottom: 1px solid var(--rule);
   text-decoration: none;
   transition: color 0.2s ease;
+  color: var(--ink);
 }
-.contact-detail:hover { color: var(--ink); }
-.contact-work {
-  margin-top: 20px;
-  font-size: 0.875rem;
+.contact-link:hover { color: var(--orange); }
+.contact-link-label {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--ink-3);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+}
+.contact-link-value {
+  font-size: 1rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: inherit;
+}
+.contact-work-link {
+  font-size: 0.8125rem;
   font-weight: 400;
   color: var(--ink-3);
   text-decoration: none;
-  border-bottom: 1px solid var(--rule);
-  padding-bottom: 2px;
-  transition: color 0.2s ease, border-color 0.2s ease;
+  transition: color 0.2s ease;
+  align-self: flex-start;
 }
-.contact-work:hover { color: var(--ink); border-color: rgba(10,10,10,0.3); }
+.contact-work-link:hover { color: var(--ink); }
 
 /* ─────────────────────────────────────────────────────────────
    Work page

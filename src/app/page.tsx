@@ -1,40 +1,39 @@
 export default function Home() {
   return (
-    <div className="contact-page">
-      <header className="home-nav" style={{ height: "72px" }}>
-        <span
-          className="home-nav-logo"
-          style={{ fontSize: "1.125rem", fontWeight: 600, letterSpacing: "0.22em" }}
-        >
-          SANJ STUDIO
-        </span>
-        <a
-          href="mailto:jyesanjurjo12@gmail.com"
-          style={{
-            position: "absolute",
-            right: "var(--px)",
-            fontSize: "0.75rem",
-            fontWeight: 600,
-            letterSpacing: "0.08em",
-            color: "#fff",
-            background: "#0a0a0a",
-            textDecoration: "none",
-            padding: "10px 20px",
-          }}
-        >
-          FREE QUOTE
-        </a>
+    <div className="landing-page">
+      {/* Nav */}
+      <header className="landing-nav">
+        <span className="landing-logo">SANJ STUDIO</span>
+        <a href="/contact" className="landing-quote">FREE QUOTE</a>
       </header>
-      <div className="contact-content">
-        <p className="contact-heading">Contact Me For a Website</p>
-        <a href="mailto:jyesanjurjo12@gmail.com" className="contact-detail">
-          jyesanjurjo12@gmail.com
-        </a>
-        <a href="tel:+61402803830" className="contact-detail">
-          0402 803 830
-        </a>
-        <a href="/work" className="contact-work">View my work</a>
-      </div>
+
+      {/* Main content */}
+      <main className="landing-main">
+        {/* Top-left label */}
+        <span className="landing-label">Wollongong, NSW · Est. 2024</span>
+
+        {/* Centre headline */}
+        <div className="landing-headline">
+          <h1 className="landing-h1">Design.<br />Brand.<br />Create.</h1>
+        </div>
+
+        {/* Bottom row */}
+        <div className="landing-bottom">
+          <p className="landing-desc">
+            Custom websites &amp; brand identities.<br />
+            No templates. Two-week delivery.
+          </p>
+          <a href="/work" className="landing-work-link">
+            View my work
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+              <path d="M3 13L13 3M13 3H6M13 3V10" stroke="currentColor" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </main>
+
+      {/* Decorative rule */}
+      <div className="landing-rule" aria-hidden="true" />
     </div>
   );
 }
