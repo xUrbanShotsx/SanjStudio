@@ -743,6 +743,14 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   padding: 0 var(--px) 0;
   overflow: hidden;
 }
+@media (max-width: 540px) {
+  .contact-main {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: calc(72px + 32px);
+    padding-bottom: 48px;
+  }
+}
 .contact-inner {
   width: 100%;
   max-width: 600px;
