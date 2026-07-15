@@ -86,7 +86,7 @@ export default function ContactPage() {
 
                 <div className="cf-field">
                   <label className="cf-label" htmlFor="cf-message">Tell me about your project</label>
-                  <textarea id="cf-message" className="cf-input cf-textarea" placeholder="What's your business, what do you need, any deadlines?" value={form.message} onChange={set("message")} required rows={4} />
+                  <textarea id="cf-message" className="cf-input cf-textarea" placeholder="What's your business, what do you need, any deadlines?" value={form.message} onChange={set("message")} required rows={3} />
                 </div>
 
                 {status === "error" && (

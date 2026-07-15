@@ -665,9 +665,10 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 .contact-main {
   flex: 1;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding: calc(72px + 56px) var(--px) 60px;
+  padding: 0 var(--px) 0;
+  overflow: hidden;
 }
 .contact-inner {
   width: 100%;
@@ -682,26 +683,26 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-3);
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   display: block;
 }
 .contact-h1 {
   font-family: 'Agrandir Wide', sans-serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
   font-weight: 900;
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: -0.02em;
   line-height: 0.95;
   color: var(--ink);
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .contact-sub {
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: var(--ink-2);
-  line-height: 1.65;
-  margin-bottom: 48px;
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 .contact-links {
   display: flex;
@@ -786,21 +787,21 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 .cf-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin-top: 32px;
+  gap: 12px;
+  margin-top: 0;
 }
 .cf-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  gap: 12px;
 }
 .cf-field {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 5px;
 }
 .cf-label {
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -808,12 +809,12 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 .cf-input {
   font-family: inherit;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--ink);
   background: transparent;
   border: 1px solid var(--rule);
   border-radius: 4px;
-  padding: 12px 14px;
+  padding: 10px 12px;
   outline: none;
   transition: border-color 0.2s ease;
   width: 100%;
@@ -825,14 +826,14 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 .cf-select {
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%230a0a0a' stroke-opacity='0.35' stroke-width='1.25' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
-  background-position: right 14px center;
-  padding-right: 36px;
+  background-position: right 12px center;
+  padding-right: 32px;
   cursor: pointer;
 }
 .cf-textarea {
-  resize: vertical;
-  min-height: 110px;
-  line-height: 1.6;
+  resize: none;
+  height: 80px;
+  line-height: 1.5;
 }
 .cf-submit {
   font-family: inherit;
@@ -842,7 +843,7 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   color: #fff;
   background: var(--ink);
   border: none;
-  padding: 14px 28px;
+  padding: 12px 24px;
   cursor: pointer;
   align-self: flex-start;
   transition: opacity 0.2s ease;
