@@ -331,6 +331,13 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   border-color: rgba(10,10,10,0.25);
   background: #fafafa;
 }
+.work-item--inert {
+  cursor: default;
+}
+.work-item--inert:hover {
+  border-color: inherit;
+  background: inherit;
+}
 .work-item-num {
   position: absolute;
   bottom: 12px;
