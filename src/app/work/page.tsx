@@ -4,7 +4,7 @@ const projects = [
   { num: "03", href: "https://innovate-property.vercel.app", label: "INNOVATE PROPERTY GROUP", bg: "#0a0a0a", color: "rgba(255,255,255,0.9)" },
   { num: "04", href: "https://dustpro.vercel.app", label: "DUST PRO PTY LTD", bg: "#C0392B", color: "rgba(255,255,255,0.9)" },
   { num: "05", href: null, label: "ETERNAL SAFETY SOLUTIONS", bg: "#1b1f24", color: "rgba(255,255,255,0.9)" },
-  { num: "06", href: null, label: null, bg: null, color: null },
+  { num: "06", href: null, label: "THE COASTAL BERRY", bg: "#f4f1e8", color: "rgba(10,10,10,0.85)" },
 ];
 
 export default function WorkPage() {
