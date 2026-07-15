@@ -272,6 +272,13 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   color: #fff;
   text-decoration: none;
 }
+.landing-nav--light .landing-logo {
+  color: var(--ink);
+}
+.landing-nav--light {
+  background: #fff;
+  border-bottom-color: var(--rule);
+}
 .landing-quote {
   position: absolute;
   right: var(--px);

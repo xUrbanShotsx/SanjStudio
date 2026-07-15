@@ -1,8 +1,8 @@
 export default function ContactPage() {
   return (
     <div className="contact-page">
-      <header className="landing-nav">
-        <a href="/" className="landing-logo" style={{ textDecoration: "none" }}>SANJ STUDIO</a>
+      <header className="landing-nav" style={{ background: "#fff", borderBottomColor: "rgba(10,10,10,0.08)" }}>
+        <a href="/" className="landing-logo" style={{ color: "#0a0a0a" }}>SANJ STUDIO</a>
         <a href="/contact" className="landing-quote landing-quote--active">FREE QUOTE</a>
       </header>
 
