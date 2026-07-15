@@ -15,7 +15,7 @@ export default function Home() {
 
       {/* Nav */}
       <header className="landing-nav">
-        <img src="/Sanjlogo.png" alt="Sanj Studio" className="landing-logo-img" style={{ height: "52px" }} />
+        <img src="/Sanjlogo.png" alt="Sanj Studio" className="landing-logo-img" style={{ height: "60px" }} />
         <a href="/contact" className="landing-quote">FREE QUOTE</a>
       </header>
 
