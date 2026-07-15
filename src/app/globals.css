@@ -259,6 +259,7 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 @media (max-width: 540px) {
   .landing-logo-img { height: 28px; }
+  .landing-nav { justify-content: flex-start; }
 }
 .landing-nav--light .landing-logo {
   color: var(--ink);
