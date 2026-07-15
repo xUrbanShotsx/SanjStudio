@@ -24,9 +24,9 @@ export default function Home() {
         {/* Centre headline */}
         <div className="landing-headline">
           <h1 className="landing-h1">
-            <span className="landing-h1-word">Design.</span><br />
-            <span className="landing-h1-word">Scale.</span><br />
-            <span className="landing-h1-word">Create.</span>
+            <a href="/design" className="landing-h1-word">Design.</a><br />
+            <a href="/scale" className="landing-h1-word">Scale.</a><br />
+            <a href="/create" className="landing-h1-word">Create.</a>
           </h1>
         </div>
 
