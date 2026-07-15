@@ -659,9 +659,37 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 
 @media (max-width: 768px) {
-  .sp-main { grid-template-columns: 1fr; }
-  .sp-left { border-right: none; border-bottom: 1px solid var(--rule); padding-bottom: 40px; }
-  .sp-right { padding-top: 40px; background: #fff; }
+  /* collapse to single column */
+  .sp-main {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  /* left panel: stack top-to-bottom; keep overflow:hidden for bg-num containment */
+  .sp-left {
+    justify-content: flex-start;
+    overflow: hidden;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 40px var(--px) 48px;
+    min-height: auto;
+  }
+  /* right panel */
+  .sp-right {
+    padding: 40px var(--px) 48px;
+    background: #fafafa;
+  }
+  /* shrink background number so it doesn't dominate on mobile */
+  .sp-bg-num {
+    font-size: clamp(100px, 40vw, 160px);
+  }
+  /* bump up h1 — 5vw is too small on 375px */
+  .sp-h1 {
+    font-size: clamp(3rem, 12vw, 4rem);
+  }
+  /* callout also needs a floor at mobile */
+  .sp-callout {
+    font-size: clamp(1rem, 4vw, 1.25rem);
+  }
 }
 
 .landing-bottom {
