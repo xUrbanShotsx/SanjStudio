@@ -41,6 +41,9 @@ body {
   overflow-x: hidden;
   cursor: none;
 }
+@media (pointer: coarse) {
+  body, a, button { cursor: auto; }
+}
 
 h1, h2, h3, h4 { margin: 0; color: var(--ink); text-wrap: balance; }
 p { margin: 0; text-wrap: pretty; }
