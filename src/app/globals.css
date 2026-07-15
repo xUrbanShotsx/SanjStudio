@@ -356,7 +356,32 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 
 @media (max-width: 640px) {
-  .work-grid { grid-template-columns: repeat(2, 1fr); }
+  .work-page {
+    padding: 0;
+    height: 100svh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+  .work-back {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 6px 12px;
+    margin: 0;
+  }
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .work-item {
+    aspect-ratio: unset;
+    height: 100svh;
+    scroll-snap-align: start;
+  }
 }
 
 /* ─────────────────────────────────────────────────────────────
