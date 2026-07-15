@@ -266,10 +266,9 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   height: 36px;
   width: auto;
   display: block;
-  filter: invert(1) brightness(2);
 }
 .landing-logo-img--dark {
-  filter: none;
+  filter: invert(1);
 }
 @media (max-width: 540px) {
   .landing-logo-img { height: 28px; }

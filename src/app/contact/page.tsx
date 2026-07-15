@@ -2,7 +2,7 @@ export default function ContactPage() {
   return (
     <div className="contact-page">
       <header className="landing-nav" style={{ background: "#fff", borderBottomColor: "rgba(10,10,10,0.08)" }}>
-        <a href="/"><img src="/Sanjlogo.png" alt="Sanj Studio" className="landing-logo-img landing-logo-img--dark" /></a>
+        <a href="/"><img src="/Sanjlogo.png" alt="Sanj Studio" className="landing-logo-img" style={{ filter: "invert(1)" }} /></a>
         <a href="/contact" className="landing-quote landing-quote--active">FREE QUOTE</a>
       </header>
 
