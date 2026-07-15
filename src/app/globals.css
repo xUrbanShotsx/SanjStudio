@@ -371,6 +371,50 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   justify-content: center;
   padding: 60px var(--px) 60px var(--px);
   border-right: 1px solid var(--rule);
+  position: relative;
+  overflow: hidden;
+}
+.sp-left-content {
+  position: relative;
+  z-index: 1;
+}
+.sp-bg-num {
+  position: absolute;
+  bottom: -0.18em;
+  left: -0.04em;
+  font-family: 'Agrandir Wide', sans-serif;
+  font-size: clamp(160px, 28vw, 320px);
+  font-weight: 900;
+  text-transform: uppercase;
+  color: rgba(10,10,10,0.045);
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+  z-index: 0;
+}
+.sp-callout {
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 700;
+  color: var(--orange);
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+@keyframes sp-reveal {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.sp-reveal {
+  opacity: 0;
+  animation: sp-reveal 0.55s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+.sp-reveal-1 { animation-delay: 0.05s; }
+.sp-reveal-2 { animation-delay: 0.12s; }
+.sp-reveal-3 { animation-delay: 0.22s; }
+.sp-reveal-4 { animation-delay: 0.32s; }
+.sp-reveal-5 { animation-delay: 0.42s; }
+.sp-reveal-6 { animation-delay: 0.52s; }
+@media (prefers-reduced-motion: reduce) {
+  .sp-reveal { animation: none; opacity: 1; }
 }
 .sp-right {
   display: flex;

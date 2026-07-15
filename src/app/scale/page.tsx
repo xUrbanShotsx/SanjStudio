@@ -25,20 +25,26 @@ export default function ScalePage() {
 
       <main className="sp-main">
         <div className="sp-left">
-          <span className="sp-num">02</span>
-          <h1 className="sp-h1">Scale.</h1>
-          <p className="sp-lead">A good site doesn't just look right — it gets found, loads fast, and grows with your business.</p>
-          <ul className="sp-includes">
-            <li>On-page SEO foundations</li>
-            <li>Meta, Open Graph & structured data</li>
-            <li>Optimised images & fast load times</li>
-            <li>Mobile-first performance</li>
-            <li>Google Search Console setup</li>
-          </ul>
-          <div className="sp-footer-nav">
-            <a href="/design" className="service-back">← Design</a>
-            <a href="/create" className="service-next">Create →</a>
+          <div className="sp-left-content">
+            <span className="sp-num sp-reveal sp-reveal-1">02</span>
+            <h1 className="sp-h1 sp-reveal sp-reveal-2">Scale.</h1>
+            <p className="sp-callout sp-reveal sp-reveal-3">Built to rank.</p>
+            <p className="sp-lead sp-reveal sp-reveal-4">
+              A good site doesn't just look right — it gets found, loads fast, and grows with your business from day one.
+            </p>
+            <ul className="sp-includes sp-reveal sp-reveal-5">
+              <li>On-page SEO foundations</li>
+              <li>Meta, Open Graph &amp; structured data</li>
+              <li>Optimised images &amp; fast load times</li>
+              <li>Mobile-first performance</li>
+              <li>Google Search Console setup</li>
+            </ul>
+            <div className="sp-footer-nav sp-reveal sp-reveal-6">
+              <a href="/design" className="service-back">← Design</a>
+              <a href="/create" className="service-next">Create →</a>
+            </div>
           </div>
+          <span className="sp-bg-num" aria-hidden="true">02</span>
         </div>
 
         <div className="sp-right">
@@ -51,10 +57,7 @@ export default function ScalePage() {
                   <span className="sp-metric-score">{m.score}</span>
                 </div>
                 <div className="sp-metric-track">
-                  <div
-                    className="sp-metric-bar"
-                    style={{ width: animated ? `${m.score}%` : "0%" }}
-                  />
+                  <div className="sp-metric-bar" style={{ width: animated ? `${m.score}%` : "0%" }} />
                 </div>
               </div>
             ))}

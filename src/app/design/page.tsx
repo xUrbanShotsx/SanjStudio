@@ -20,20 +20,26 @@ export default function DesignPage() {
 
       <main className="sp-main">
         <div className="sp-left">
-          <span className="sp-num">01</span>
-          <h1 className="sp-h1">Design.</h1>
-          <p className="sp-lead">Every site starts with a design made for your business — not a template someone else already used.</p>
-          <ul className="sp-includes">
-            <li>Discovery & brief</li>
-            <li>Wireframes & layouts</li>
-            <li>Visual direction — type, colour, spacing</li>
-            <li>Desktop & mobile files</li>
-            <li>Revision rounds until it's right</li>
-          </ul>
-          <div className="sp-footer-nav">
-            <a href="/" className="service-back">← Home</a>
-            <a href="/scale" className="service-next">Scale →</a>
+          <div className="sp-left-content">
+            <span className="sp-num sp-reveal sp-reveal-1">01</span>
+            <h1 className="sp-h1 sp-reveal sp-reveal-2">Design.</h1>
+            <p className="sp-callout sp-reveal sp-reveal-3">No templates. Ever.</p>
+            <p className="sp-lead sp-reveal sp-reveal-4">
+              Every site starts with a design made for your business — not copied from a theme someone else already used.
+            </p>
+            <ul className="sp-includes sp-reveal sp-reveal-5">
+              <li>Discovery &amp; brief</li>
+              <li>Wireframes &amp; layouts</li>
+              <li>Visual direction — type, colour, spacing</li>
+              <li>Desktop &amp; mobile files</li>
+              <li>Revision rounds until it&apos;s right</li>
+            </ul>
+            <div className="sp-footer-nav sp-reveal sp-reveal-6">
+              <a href="/" className="service-back">← Home</a>
+              <a href="/scale" className="service-next">Scale →</a>
+            </div>
           </div>
+          <span className="sp-bg-num" aria-hidden="true">01</span>
         </div>
 
         <div className="sp-right">
