@@ -296,10 +296,9 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 .landing-main {
   flex: 1;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+  display: flex;
+  flex-direction: column;
   padding: calc(72px + 40px) var(--px) 40px;
-  gap: 0;
 }
 .landing-label {
   font-size: 0.6875rem;
@@ -310,6 +309,7 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   align-self: start;
 }
 .landing-headline {
+  flex: 1;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -329,7 +329,6 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   justify-content: space-between;
   gap: 24px;
   padding-top: 32px;
-  border-top: 1px solid var(--rule);
 }
 .landing-desc {
   font-size: 0.875rem;
