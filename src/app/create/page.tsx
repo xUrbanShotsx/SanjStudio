@@ -1,4 +1,27 @@
+"use client";
+import { useEffect, useState } from "react";
+
+const lines = [
+  { text: "$ git push origin main", type: "cmd" },
+  { text: "Enumerating objects: done.", type: "out" },
+  { text: "→  Deploying to Vercel...", type: "info" },
+  { text: "✓  Build completed in 8.4s", type: "success" },
+  { text: "✓  Edge Network deployed", type: "success" },
+  { text: "✓  Live at yoursite.com", type: "success" },
+  { text: "_", type: "cursor" },
+];
+
 export default function CreatePage() {
+  const [visible, setVisible] = useState(0);
+
+  useEffect(() => {
+    if (visible < lines.length) {
+      const delay = lines[visible].type === "cmd" ? 600 : 500;
+      const t = setTimeout(() => setVisible((v) => v + 1), delay);
+      return () => clearTimeout(t);
+    }
+  }, [visible]);
+
   return (
     <div className="service-page">
       <header className="landing-nav" style={{ background: "#fff", borderBottomColor: "rgba(10,10,10,0.08)" }}>
@@ -6,34 +29,40 @@ export default function CreatePage() {
         <a href="/contact" className="landing-quote landing-quote--dark">FREE QUOTE</a>
       </header>
 
-      <main className="service-main">
-        <div className="service-inner">
-          <span className="service-num">03</span>
-          <h1 className="service-h1">Create.</h1>
-          <p className="service-lead">
-            Everything I design, I build. Custom code, no builders — deployed live within two weeks of sign-off.
-          </p>
-          <div className="service-body">
-            <div className="service-col">
-              <h2 className="service-col-heading">How it's built</h2>
-              <p>I write everything in Next.js — clean, hand-coded components that load fast and work on every device. No Webflow, no Wix, no page builders.</p>
-              <p>Once it's ready, I deploy to Vercel. You get a live URL, a fast global CDN, and automatic HTTPS — the same infrastructure used by some of the world's biggest sites.</p>
-            </div>
-            <div className="service-col">
-              <h2 className="service-col-heading">What's included</h2>
-              <ul className="service-list">
-                <li>Custom-coded in Next.js</li>
-                <li>Mobile-first, fully responsive</li>
-                <li>Deployed to Vercel — live in 2 weeks</li>
-                <li>Fast global CDN & automatic HTTPS</li>
-                <li>Full code handover — you own it</li>
-                <li>12-month warranty on all builds</li>
-              </ul>
-            </div>
-          </div>
-          <div className="service-nav-links">
+      <main className="sp-main">
+        <div className="sp-left">
+          <span className="sp-num">03</span>
+          <h1 className="sp-h1">Create.</h1>
+          <p className="sp-lead">Everything I design, I build. Custom code — deployed live within two weeks of sign-off.</p>
+          <ul className="sp-includes">
+            <li>Custom-coded in Next.js</li>
+            <li>Mobile-first, fully responsive</li>
+            <li>Deployed to Vercel in 14 days</li>
+            <li>Fast global CDN & HTTPS</li>
+            <li>Full code handover — you own it</li>
+          </ul>
+          <div className="sp-footer-nav">
             <a href="/scale" className="service-back">← Scale</a>
             <a href="/contact" className="service-next">Get a quote →</a>
+          </div>
+        </div>
+
+        <div className="sp-right">
+          <p className="sp-right-label">Every project, same process</p>
+          <div className="sp-terminal">
+            <div className="sp-terminal-bar">
+              <span className="sp-terminal-dot" style={{ background: "#ff5f57" }} />
+              <span className="sp-terminal-dot" style={{ background: "#febc2e" }} />
+              <span className="sp-terminal-dot" style={{ background: "#28c840" }} />
+              <span className="sp-terminal-title">deploy.sh</span>
+            </div>
+            <div className="sp-terminal-body">
+              {lines.slice(0, visible).map((l, i) => (
+                <div key={i} className={`sp-terminal-line sp-terminal-line--${l.type}`}>
+                  {l.type === "cursor" ? <span className="sp-cursor" /> : l.text}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </main>
