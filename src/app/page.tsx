@@ -9,9 +9,6 @@ export default function Home() {
 
       {/* Main content */}
       <main className="landing-main">
-        {/* Top-left label */}
-        <span className="landing-label">Wollongong, NSW · Est. 2024</span>
-
         {/* Centre headline */}
         <div className="landing-headline">
           <h1 className="landing-h1">Design.<br />Brand.<br />Create.</h1>
