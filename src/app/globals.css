@@ -262,6 +262,18 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   color: #fff;
   text-decoration: none;
 }
+.landing-logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+  filter: brightness(0) invert(1);
+}
+.landing-logo-img--dark {
+  filter: brightness(0);
+}
+@media (max-width: 540px) {
+  .landing-logo-img { height: 28px; }
+}
 .landing-nav--light .landing-logo {
   color: var(--ink);
 }

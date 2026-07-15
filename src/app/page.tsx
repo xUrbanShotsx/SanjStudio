@@ -15,7 +15,7 @@ export default function Home() {
 
       {/* Nav */}
       <header className="landing-nav">
-        <span className="landing-logo">SANJ STUDIO</span>
+        <img src="/Sanjlogo.png" alt="Sanj Studio" className="landing-logo-img" />
         <a href="/contact" className="landing-quote">FREE QUOTE</a>
       </header>
 
