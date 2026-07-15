@@ -335,6 +335,15 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   text-transform: uppercase;
   text-wrap: balance;
 }
+.landing-h1-word {
+  display: inline-block;
+  transition: color 0.2s ease, -webkit-text-stroke 0.2s ease;
+  cursor: default;
+}
+.landing-h1-word:hover {
+  color: transparent;
+  -webkit-text-stroke: 2px #fff;
+}
 .landing-bottom {
   display: flex;
   align-items: flex-end;
