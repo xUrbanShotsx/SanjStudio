@@ -4,7 +4,7 @@ export default function Home() {
       {/* Video background */}
       <video
         className="landing-video"
-        src="/3 Myee St - Drone.mp4"
+        src="/drone-hero.mp4"
         autoPlay
         muted
         loop
