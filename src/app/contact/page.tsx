@@ -62,14 +62,7 @@ export default function ContactPage() {
                 <div className="cf-row">
                   <div className="cf-field">
                     <label className="cf-label" htmlFor="cf-service">What industry are you in?</label>
-                    <select id="cf-service" className="cf-input cf-select" value={form.service} onChange={set("service")} required>
-                      <option value="" disabled>Select a service</option>
-                      <option value="design">Design — website design</option>
-                      <option value="scale">Scale — SEO &amp; performance</option>
-                      <option value="create">Create — full build &amp; deploy</option>
-                      <option value="all">All three</option>
-                      <option value="unsure">Not sure yet</option>
-                    </select>
+                    <input id="cf-service" className="cf-input" type="text" placeholder="e.g. Real estate, hospitality, retail…" value={form.service} onChange={set("service")} />
                   </div>
                   <div className="cf-field">
                     <label className="cf-label" htmlFor="cf-budget">Budget range</label>
