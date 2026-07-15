@@ -9,11 +9,11 @@ import {
   useSpring,
   AnimatePresence,
 } from "framer-motion";
-
-const EASE: [number, number, number, number] = EASE;
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import { Badge } from "@/components/ui/badge";
+
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 /* ─── Constants ────────────────────────────────────────────── */
 const MARQUEE_ITEMS = [

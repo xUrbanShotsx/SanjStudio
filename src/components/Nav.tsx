@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const EASE: [number, number, number, number] = EASE;
+const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 
