@@ -1040,6 +1040,7 @@ ul, li { margin: 0; padding: 0; list-style: none; }
     height: 100svh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    scroll-padding-top: 8px;
     background: #fff;
   }
   .work-back {
@@ -1056,11 +1057,13 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   .work-grid {
     grid-template-columns: 1fr;
     gap: 8px;
+    padding: 8px;
   }
   .work-item {
     aspect-ratio: unset;
-    height: calc(100svh - 8px);
+    height: calc(100svh - 16px);
     scroll-snap-align: start;
+    border-radius: 4px;
   }
 }
 
