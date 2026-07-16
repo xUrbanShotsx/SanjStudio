@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "SanjStudio" }],
   creator: "SanjStudio",
-  metadataBase: new URL("https://sanjstudio.vercel.app"),
+  metadataBase: new URL("https://sanjstudio.com"),
   openGraph: {
     type: "website",
     locale: "en_AU",

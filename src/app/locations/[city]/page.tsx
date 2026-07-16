@@ -36,7 +36,7 @@ export default async function CityPage({ params }: Props) {
       addressCountry: "AU",
     },
     serviceType: "Web Design",
-    url: `https://sanjstudio.vercel.app/locations/${city}`,
+    url: `https://sanjstudio.com/locations/${city}`,
     priceRange: "$$",
   };
 

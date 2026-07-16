@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { cities } from "./locations/[city]/cities";
 
-const BASE = "https://sanjstudio.vercel.app";
+const BASE = "https://sanjstudio.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const cityPages = Object.keys(cities).map((city) => ({
