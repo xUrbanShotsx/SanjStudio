@@ -20,9 +20,46 @@ const serif = DM_Serif_Display({
 });
 
 export const metadata: Metadata = {
-  title: "SanjStudio — Design. Brand. Create.",
+  title: {
+    default: "SanjStudio | Custom Website Design Australia",
+    template: "%s | SanjStudio",
+  },
   description:
-    "A Wollongong studio designing, branding, and building websites for businesses that want to stand out.",
+    "SanjStudio builds custom websites and brand identities for Australian businesses. No templates, no page builders. Two-week delivery. Serving Sydney, Melbourne, Brisbane, Perth, Wollongong and beyond.",
+  keywords: [
+    "custom website design Australia",
+    "web design Sydney",
+    "web design Melbourne",
+    "web design Brisbane",
+    "web design Perth",
+    "web design Wollongong",
+    "website designer Australia",
+    "custom website builder Australia",
+    "small business website Australia",
+    "Next.js web developer Australia",
+  ],
+  authors: [{ name: "SanjStudio" }],
+  creator: "SanjStudio",
+  metadataBase: new URL("https://sanjstudio.vercel.app"),
+  openGraph: {
+    type: "website",
+    locale: "en_AU",
+    siteName: "SanjStudio",
+    title: "SanjStudio | Custom Website Design Australia",
+    description:
+      "Custom websites and brand identities for Australian businesses. No templates. Two-week delivery.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SanjStudio | Custom Website Design Australia",
+    description:
+      "Custom websites and brand identities for Australian businesses. No templates. Two-week delivery.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
 };
 
 export default function RootLayout({
