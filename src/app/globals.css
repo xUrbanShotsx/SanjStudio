@@ -940,12 +940,9 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 .cf-sent {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 12px;
-}
-.cf-sent-icon {
-  font-size: 1.25rem;
-  color: #16a34a;
-  margin-bottom: 4px;
 }
 .cf-sent-h1 {
   font-family: 'Agrandir Wide', sans-serif;
@@ -956,6 +953,10 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   letter-spacing: -0.02em;
   line-height: 0.95;
   color: var(--ink);
+}
+.cf-sent-hollow {
+  -webkit-text-stroke: 2px var(--ink);
+  color: transparent;
 }
 .cf-sent-sub {
   font-size: 1rem;

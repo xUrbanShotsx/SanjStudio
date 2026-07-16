@@ -37,8 +37,7 @@ export default function ContactPage() {
         <div className="contact-inner">
           {status === "sent" ? (
             <div className="cf-sent">
-              <span className="cf-sent-icon">✓</span>
-              <h1 className="cf-sent-h1">Message sent.</h1>
+              <h1 className="cf-sent-h1">MESSAGE <span className="cf-sent-hollow">SENT.</span></h1>
               <p className="cf-sent-sub">I&apos;ll get back to you within 24 hours.</p>
               <a href="/" className="cf-sent-back">← Back to home</a>
             </div>
