@@ -1032,7 +1032,6 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   font-weight: 700;
   letter-spacing: 0.14em;
   font-variant-numeric: tabular-nums;
-  opacity: 0.45;
 }
 .work-item-label {
   font-family: 'Agrandir Wide', sans-serif;

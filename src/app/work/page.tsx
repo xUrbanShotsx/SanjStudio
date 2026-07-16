@@ -29,7 +29,7 @@ export default function WorkPage() {
                   {label}
                 </span>
               )}
-              <span className="work-item-num" style={color ? { color: color.replace('0.9', '0.45') } : undefined}>
+              <span className="work-item-num" style={color ? { color: color.replace('0.9', '0.28') } : undefined}>
                 {num}
               </span>
             </Tag>
