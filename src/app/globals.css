@@ -943,26 +943,32 @@ ul, li { margin: 0; padding: 0; list-style: none; }
   gap: 12px;
 }
 .cf-sent-icon {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: #16a34a;
+  margin-bottom: 4px;
 }
 .cf-sent-h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  font-weight: 700;
-  letter-spacing: -0.035em;
+  font-family: 'Agrandir Wide', sans-serif;
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+  font-weight: 900;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
   color: var(--ink);
 }
 .cf-sent-sub {
   font-size: 1rem;
   color: var(--ink-2);
-  margin-bottom: 16px;
+  margin-top: 4px;
+  margin-bottom: 20px;
 }
 .cf-sent-back {
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--ink);
   text-decoration: none;
-  opacity: 0.5;
+  opacity: 0.45;
   transition: opacity 0.2s ease;
 }
 .cf-sent-back:hover { opacity: 1; }
