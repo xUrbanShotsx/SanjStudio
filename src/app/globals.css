@@ -1026,19 +1026,24 @@ ul, li { margin: 0; padding: 0; list-style: none; }
 }
 .work-item-num {
   position: absolute;
-  bottom: 12px;
-  left: 14px;
-  font-size: 0.6875rem;
-  font-weight: 400;
-  color: var(--ink-3);
+  bottom: 14px;
+  left: 16px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
   font-variant-numeric: tabular-nums;
+  opacity: 0.45;
 }
 .work-item-label {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-family: 'Agrandir Wide', sans-serif;
+  font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
   text-align: center;
-  padding: 0 16px;
+  padding: 0 20px;
+  line-height: 1.1;
 }
 
 @media (max-width: 640px) {
